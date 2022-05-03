@@ -1,0 +1,8 @@
+<div>
+  <ul *ngFor="let user of users">
+    <li (click)="selectUser(user, $event)">{{ user.name }}</li>
+  </ul>
+</div>
+<div>
+  <h1>{{clickedUser?.name}}</h1>
+</div>
