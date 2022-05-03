@@ -3,8 +3,10 @@
     <li (click)="selectUser(user, $event)">{{ user.name }}</li>
   </ul>
 </div>
-<div>
-  <h1>{{clickedUser?.name}}</h1>
-  <p>{{ clickedUser?.username }}</p>
-  <p>{{ clickedUser?.email }}</p>
+<div *ngIf="clickedUser">
+  <h1>User</h1>
+  <p><b>Name:</b> {{ clickedUser?.name }}</p>
+  <p><b>Username:</b> {{ clickedUser?.username }}</p>
+  <p><b>Email:</b> {{ clickedUser?.email }}</p>
+  <p><b>Phone:</b> {{ clickedUser?.phone }}</p>
 </div>
